@@ -22,7 +22,7 @@ const Contact = lazy(() => import("./components/Contact"))
 const App = () => {
 
   const [user, setUser] = useState({
-    name : "Athar"
+    name : "lucifer"
   })
 
   return ( 
