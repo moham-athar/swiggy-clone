@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 import useOnline from '../utils/useOnline';
 import { useSelector } from 'react-redux';
+import { useContext } from 'react'; 
+import UserContext from '../utils/UserContext';
 
 const Header = () => {
 
@@ -12,6 +14,8 @@ const Header = () => {
 
 const cartItems = useSelector(store => store.cart.items)
 console.log(cartItems)
+
+const { user }  = useContext(UserContext);
 
     return (
       <div className='ml-12 mr-12 '>
@@ -30,7 +34,7 @@ console.log(cartItems)
 
           <li> 
             <Link to = "/profile">
-              Profile
+              {user.name}
             </Link>
             </li>
           

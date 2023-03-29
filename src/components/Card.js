@@ -4,7 +4,7 @@ import { IMG_CDN_URL } from './constant'
 
 const Card = ({name, cuisines, cloudinaryImageId, lastMileTravelString, costForTwoString, slaString, avgRating }) => {
     return (
-      <div className=' bg-white mr-5 ml-20 hover:border-gray-500'>
+      <div className='bg-white mr-5 ml-20 hover:border-gray-500'>
       <div className="w-64 p-1 m-1 ">
           <img className='w-60 h-40' src=  {IMG_CDN_URL + cloudinaryImageId}/>
           <h2 className='font-medium text-left pb-2'>{name}</h2>

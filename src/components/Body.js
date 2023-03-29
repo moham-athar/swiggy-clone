@@ -34,7 +34,7 @@ const Body = () => {
     
   }
 
-const isOnline = useOnline()
+const isOnline = useOnline();
 
 if(!isOnline){
   return <h1>You are Offline</h1>
@@ -55,7 +55,7 @@ if (!allrestaurants) return null;
           }}
         />
         <button
-          className="  text-gray-600 m-2 "
+          className="  text-gray-600 m-2"
           onClick={() => {
             //need to filter the data
             const data = filterData(searchText, allrestaurants);

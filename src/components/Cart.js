@@ -17,12 +17,13 @@ const Cart = () => {
     }
 
   return (
-  <div className='flex justify-center items-center '>
+  <>
+  <div className='flex justify-center items-center pt-14'>
    {cartItems.length == 0 ?  
-   ( <div className=' text-center flex flex-col justify-center'>
-    <img className='w-5/6 ' src= {emptyCart} alt = "empty"/>
+   ( <div className='flex flex-col justify-center'>
+    <img className='w-96' src= {emptyCart} alt = "empty"/>
     <Link to="/">
-     <div className="w-4/5 bg-orange-600 text-white rounded-md p-2 m-2">SEE RESTAURANTS NEAR YOU</div>
+     <div className="ml-16 text-center w-64 bg-orange-600 text-white rounded-md p-2 m-2">SEE RESTAURANTS NEAR YOU</div>
     </Link>
 </div>)
 : (
@@ -35,6 +36,7 @@ const Cart = () => {
     )
     }
     </div>
+    </>
   )
 }
 

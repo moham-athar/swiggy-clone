@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import { IMG_CDN_URL } from "./constant";
 import Shimmer from "./Shimmer";
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
@@ -80,10 +79,6 @@ const RestaurantMenu = () => {
                      </div>
                
             ))
-
-
-
-
           }
         </ul>
       </div>
