@@ -6,6 +6,7 @@ import Shimmer from './Shimmer';
 import useOnline from '../utils/useOnline';
 import { CiSearch } from "react-icons/ci"
 
+
 function filterData(searchText, restaurants) {
   const filterData = restaurants.filter((restaurant) =>
     restaurant.data?.name?.toLowerCase()?.includes(searchText.toLowerCase())
@@ -41,6 +42,13 @@ if(!isOnline){
 }
 
 if (!allrestaurants) return null;
+if (filterdRestaurants.length == 0) return   ( 
+<main className='flex flex-col absolute top-2/4 left-2/4'>
+<h1 className='text-2xl'>No restaurant Found </h1>
+<Link to="/">
+ <div className="ml-16 text-center w-64 bg-orange-600 text-white rounded-md p-2 m-2">SEE RESTAURANTS NEAR YOU</div>
+</Link>
+</main>)
 
   return (filterdRestaurants?.length === 0) ? <Shimmer /> : (
     <>

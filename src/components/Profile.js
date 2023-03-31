@@ -13,7 +13,7 @@ const Profile = () => {
     <div className='flex justify-center items-center flex-col'>
       <input 
         type ="text"
-        className='bg-orange-500 m-3 p-3 rounded-lg'
+        className='border border-black  m-3 p-3 rounded-lg'
         placeholder='enter your name'
         value = {value}
         onChange = { (e) => setValue(e.target.value)}
